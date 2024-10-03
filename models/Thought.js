@@ -1,9 +1,9 @@
 const { Schema, model } = require('mongoose');
 const Reaction = require('./Reaction');
 
-function currentDate(date) {
-    return date.toDateString();
-}
+// function currentDate(date) {
+//     return date.toDateString();
+// }
 
 // Schema to create Thought model
 const thoughtSchema = new Schema(
@@ -17,7 +17,7 @@ const thoughtSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now(),
-            get: currentDate(),
+            //get: currentDate(),
         },
         username: {
             type: String,

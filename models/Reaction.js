@@ -1,8 +1,8 @@
 const { Schema, Types } = require('mongoose');
 
-function currentDate(date) {
-    return date.toDateString();
-}
+// function currentDate(date) {
+//     return date.toDateString();
+// }
 
 
 const reactionSchema = new Schema(
@@ -23,7 +23,7 @@ const reactionSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now(),
-      get: currentDate(),
+      //get: currentDate(),
     },
   },
   {

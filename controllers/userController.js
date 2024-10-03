@@ -47,7 +47,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-  // Delete a course
+  // Delete a user
   async deleteUser(req, res) {
     try {
       const user = await User.findOneAndDelete({ _id: req.params.userId });
@@ -56,7 +56,7 @@ module.exports = {
         res.status(404).json({ message: 'No user with that ID' });
       }
 
-      await Thought.deleteMany({ _id: { $in: course.thoughts } });
+      await Thought.deleteMany({ _id: { $in: user.thoughts } });
       res.json({ message: 'User and thoughts deleted!' });
     } catch (err) {
       res.status(500).json(err);
