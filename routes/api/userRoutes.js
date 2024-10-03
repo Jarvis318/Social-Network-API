@@ -18,6 +18,7 @@ router
   .delete(deleteUser);
 
 //  /api/users/:userId/friends/:friendId
-// router
-// .route('/:userId/friends/:friendId').
+router
+.route('/:userId/friends/:friendId').
+
 module.exports = router;
